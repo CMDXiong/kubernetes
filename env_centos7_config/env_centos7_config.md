@@ -1,7 +1,5 @@
 # Virtualbox 安装Centos7
-===
-可以在前一行的末尾加入至少两个空格  
-
+## 新建 Virtualbox 虚拟机
 ![avatar](./pictures/1.png)
 
 ![avatar](./pictures/2.jpg)
@@ -9,13 +7,14 @@
 ![avatar](./pictures/3.png)
 ![avatar](./pictures/4.jpg)
 ![avatar](./pictures/5.png)
-![avatar](./pictures/6.jpg)
+![avatar](./pictures/6.jpg)  
+Virtualbox安装 CentOS  
+虚拟机需要分配 2 个 CPU Core，用于运行 Kubeadm  
 ![avatar](./pictures/7.jpg)
 centos7下载  
 阿里云: http://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso  
 个人网盘: 链接：https://pan.baidu.com/s/1vhl3rqHPTqTNq_FcPqtKgQ?pwd=r3es
-提取码：r3es
-
+提取码：r3es  
 选择下载的.iso 文件作为系统盘，启动虚拟机  
 ![avatar](./pictures/8.jpg)
 
