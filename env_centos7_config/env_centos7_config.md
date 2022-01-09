@@ -100,10 +100,14 @@ centos7下载
     curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
     yum install -y yum-utils device-mapper-persistent-data lvm2 wget
     ```
-2. 设置阿里云Docker的yum源
+2. 设置阿里云Docker的yum源  
+    docker-ce.repo备份链接：https://pan.baidu.com/s/16CXzKmRcYbmRUANbaDDnuQ?pwd=8kfy   
+    提取码：8kfy 
+
     ```shell
     wget https://mirrors.aliyun.com/docker-ce/linux/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
-    cp docs/Chapter2/docker-ce.repo /etc/yum.repos.d/docker-ce.repo
+    如果上面链接不可用，可用下载备份docker-ce.repo
+    cp docker-ce.repo /etc/yum.repos.d/docker-ce.repo
     ```
 3. 查看仓库中所有Docker版本
     ```shell
