@@ -87,3 +87,33 @@ centos7下载
      192.168.99.102 node1
      192.168.99.103 node2
     ```
+# 配置虚拟机免密码登录
+1. 生成密钥  
+    - >  ssh-keygen
+    - > cat ~/.ssh/id_rsa.pub
+2. 拷贝公钥到虚拟机上
+    > ssh-copy-id -i .ssh/id_rsa.pub  root@192.168.99.101
+    
+# 在 Centos7 系统上安装Docker
+1. 添加基础软件
+    ```shell
+    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    yum install -y yum-utils device-mapper-persistent-data lvm2 wget
+    ```
+2. 设置阿里云Docker的yum源
+    ```shell
+    cp docs/Chapter2/docker-ce.repo /etc/yum.repos.d/docker-ce.repo
+    ```
+3. 查看仓库中所有Docker版本
+    ```shell
+    yum list docker-ce --showduplicates | sort -r
+    ```
+4. 查看仓库中所有Docker版本
+    ```shell
+    yum install docker-ce-19.03.11 -y
+    ```
+5. 启动并加入开机启动
+    ```shell
+    systemctl start docker
+    systemctl enable docker
+    ```
