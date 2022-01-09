@@ -102,6 +102,7 @@ centos7下载
     ```
 2. 设置阿里云Docker的yum源
     ```shell
+    wget https://mirrors.aliyun.com/docker-ce/linux/docker-ce.repo -O /etc/yum.repos.d/docker-ce.repo
     cp docs/Chapter2/docker-ce.repo /etc/yum.repos.d/docker-ce.repo
     ```
 3. 查看仓库中所有Docker版本
